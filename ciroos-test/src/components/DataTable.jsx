@@ -61,23 +61,25 @@ const DataTable = ({ data }) => {
         </div>
         <div className="flex items-center gap-2">
           <button
-            className={`w-8 h-8 flex items-center justify-center rounded-md border font-bold ${currentPage === 1 ? 'bg-gray-200 cursor-not-allowed' : 'bg-white hover:bg-blue-50 border-blue-300'}`}
+            className={`px-3 py-1 flex items-center justify-center gap-1 rounded-md border font-semibold text-sm ${currentPage === 1 ? 'bg-gray-200 text-gray-400 cursor-not-allowed' : 'bg-white hover:bg-blue-50 text-blue-600 border-blue-200'}`}
             disabled={currentPage === 1}
             onClick={() => setCurrentPage((p) => p - 1)}
             aria-label="Previous page"
           >
-            <MdChevronLeft className={`h-6 w-6 ${currentPage === 1 ? 'text-gray-400' : 'text-blue-600'}`} />
+            <MdChevronLeft className="h-4 w-4" />
+            Previous
           </button>
           <span className="text-gray-700 text-sm font-semibold">
             {indexOfFirst + 1}-{Math.min(indexOfLast, data.length)} of {data.length}
           </span>
           <button
-            className={`w-8 h-8 flex items-center justify-center rounded-md border font-bold ${currentPage === totalPages || totalPages === 0 ? 'bg-gray-200 cursor-not-allowed' : 'bg-white hover:bg-blue-50 border-blue-300'}`}
+            className={`px-3 py-1 flex items-center justify-center gap-1 rounded-md border font-semibold text-sm ${currentPage === totalPages || totalPages === 0 ? 'bg-gray-200 text-gray-400 cursor-not-allowed' : 'bg-white hover:bg-blue-50 text-blue-600 border-blue-200'}`}
             disabled={currentPage === totalPages || totalPages === 0}
             onClick={() => setCurrentPage((p) => p + 1)}
             aria-label="Next page"
           >
-            <MdChevronRight className={`h-6 w-6 ${currentPage === totalPages || totalPages === 0 ? 'text-gray-400' : 'text-blue-600'}`} />
+            Next
+            <MdChevronRight className="h-4 w-4" />
           </button>
         </div>
       </div>
