@@ -1,0 +1,10 @@
+{
+  "users": [
+    { "id": 1, "name": "Rajan Kumar", "status": "Active", "amount": 400 },
+    { "id": 2, "name": "Sawan", "status": "Inactive", "amount": 200 },
+    { "id": 3, "name": "Aman", "status": "Active", "amount": 300 },
+    { "id": 4, "name": "Rahul Sharma", "status": "Inactive", "amount": 150 },
+    { "id": 5, "name": "Priya Patel", "status": "Active", "amount": 250 },
+    { "id": 6, "name": "Neha Gupta", "status": "Active", "amount": 500 }
+  ]
+}
